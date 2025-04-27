@@ -1344,67 +1344,6 @@ document.addEventListener('keydown', function(e) {
         </div>
     </section>
 
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Customer Reviews</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card" data-delay="0">
-                    <div class="testimonial-content">
-                        <div class="testimonial-header">
-                            <div class="user-tag">VIP USER</div>
-                            <div class="verify-badge" title="Verified Purchase">✓</div>
-                        </div>
-                        <div class="player-info">
-                            <div class="player-name">Micheax</div>
-                            <p class="review-text">"Started with a daily subscription, impressed by the quality. Now using lifetime - best investment ever. Clean and undetected for 3+ months."</p>
-                            <div class="purchase-info">
-                                <span>Lifetime Member</span>
-                                <span>•</span>
-                                <span>5 Days Ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card" data-delay="200">
-                    <div class="testimonial-content">
-                        <div class="testimonial-header">
-                            <div class="user-tag">PREMIUM</div>
-                            <div class="verify-badge" title="Verified Purchase">✓</div>
-                        </div>
-                        <div class="player-info">
-                            <div class="player-name">Relax</div>
-                            <p class="review-text">"Tried weekly first, then monthly. Features are insane and support team responds within minutes. Zero detection issues."</p>
-                            <div class="purchase-info">
-                                <span>Monthly Sub</span>
-                                <span>•</span>
-                                <span>3 Days Ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card" data-delay="400">
-                    <div class="testimonial-content">
-                        <div class="testimonial-header">
-                            <div class="user-tag">VERIFIED</div>
-                            <div class="verify-badge" title="Verified Purchase">✓</div>
-                        </div>
-                        <div class="player-info">
-                            <div class="player-name">Krypted</div>
-                            <p class="review-text">"Best external I've used. Started with 1-day trial, upgraded to lifetime within hours. Bypass works flawlessly."</p>
-                            <div class="purchase-info">
-                                <span>Lifetime Member</span>
-                                <span>•</span>
-                                <span>1 Week Ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Enhanced Footer -->
     <footer class="footer">
         <div class="container">
@@ -1491,7 +1430,7 @@ document.addEventListener('keydown', function(e) {
                 
                 // Prevent default behavior and redirect to Discord
                 e.preventDefault();
-                window.location.href = 'https://discord.gg/bRbHnpdqC7';
+                window.location.href = 'https://discord.gg/K8G9QadZxD';
             });
         });
 
@@ -1594,37 +1533,6 @@ document.addEventListener('keydown', function(e) {
 
             testimonials.forEach(card => observer.observe(card));
         });
-
-        // Sales Notification
-        const salesData = [];
-
-        function showNotification() {
-            const notification = document.getElementById('sales-notification');
-            const randomSale = salesData[Math.floor(Math.random() * salesData.length)] || {
-                user: 'Anonymous',
-                product: 'Colorbot',
-                duration: 'Lifetime'
-            };
-            const timeAgo = Math.floor(Math.random() * 10) + 1;
-            
-            const notificationText = document.querySelector('.notification-text');
-            const notificationTime = document.querySelector('.notification-time');
-            
-            notificationText.innerHTML = `<strong>${randomSale.user}</strong> purchased <strong>${randomSale.product}</strong> (${randomSale.duration})`;
-            notificationTime.textContent = `${timeAgo} minutes ago`;
-            
-            notification.classList.add('show');
-            
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 4000);
-        }
-
-        // Show first notification after 5 seconds
-        setTimeout(() => {
-            showNotification();
-            setInterval(showNotification, 20000);
-        }, 5000);
     </script>
 </body>
 </html>
