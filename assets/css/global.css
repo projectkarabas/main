@@ -212,6 +212,15 @@ strong {
     opacity: .8
 }
 
+footer {
+    position: relative;
+    padding: 20px;
+    background-color: #0d0f10;
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+}
+
 .auth-input {
     padding: .7rem 1.5rem;
     padding-left: 2.6rem;
